@@ -74,3 +74,13 @@ martin:
   facebook: False
   twitter: False
   cover: False
+Djangowon:
+  username: mrdw
+  name: mrdw
+  url_full: False
+  url: False
+  bio: Backend Developer
+  picture: assets/images/dw.jpg
+  facebook: False
+  twitter: False
+  cover: False

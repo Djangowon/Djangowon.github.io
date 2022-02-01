@@ -8,10 +8,11 @@ class: page-template
 subclass: 'post page'
 ---
 
-Ghost is professional publishing platform designed for modern journalism. This is a demo site of a basic Ghost install to give you a general sense of what a new Ghost site looks like when set up for the first time.
-
-> If you'd like to set up a site like this for yourself, head over to [Ghost.org](https://ghost.org/) and start a free 14 day trial to give Ghost a try!
-
-If you're a developer: Ghost is a completely open source (MIT) Node.js application built on a JSON API with an Ember.js admin client. It works with MySQL and SQLite, and is publicly available [on Github](https://github.com/TryGhost/ghost).
-
-If you need help with using Ghost, you'll find a ton of useful articles on [our knowledgebase](https://help.ghost.org/), as well as extensive [developer documentation](https://docs.ghost.org/).
+I am a Back-end developer with a fashion and design background. After graduating from fashion school, I worked in the clothing development room, but I guess I just wanted to <strong>develop</strong> it.
+I really liked games since I was young. As a result, interest in game servers has increased, and I want to study 'server' more deeply, and I am also very interested in SQL. I started developing in November 2021, and I will grow and strive to become a "Developer you want to work with."
+	
+> Features
+* I love the development culture that we share and enjoy working together for one goal.
+* I try to communicate actively and clearly.
+* I prefer honest and straightforward communication.
+* INTP

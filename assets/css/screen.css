@@ -27,6 +27,7 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap');
 
 body {
     background: #f4f8fb;
@@ -448,7 +449,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 }
 
 .post-card-excerpt {
-    font-family: Georgia, serif;
+    font-family: 'Nanum Gothic Coding', monospace;
 }
 
 .post-card-meta {
@@ -517,7 +518,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     }
 
     .home-template .post-feed .post-card:nth-child(6n+1):not(.no-image) p {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
         line-height: 1.55em;
     }
 
@@ -625,7 +626,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     margin: 0 auto;
     padding: 70px 100px 0;
     min-height: 230px;
-    font-family: Georgia, serif;
+    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 2.2rem;
     line-height: 1.6em;
     background: #fff;
@@ -920,7 +921,7 @@ Usage (In Ghost editor):
     padding: 1em 0 1.5em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia,serif;
+    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -1615,7 +1616,7 @@ Usage (In Ghost editor):
     justify-content: center;
     align-items: center;
     margin: 0 0 10px 0;
-    font-family: Georgia, serif;
+    font-family: 'Nanum Gothic Coding', monospace;
     font-style: italic;
 }
 
@@ -1754,7 +1755,7 @@ Usage (In Ghost editor):
 .subscribe-overlay-description {
     margin: 0 auto 50px;
     max-width: 650px;
-    font-family: Georgia, serif;
+    font-family: 'Nanum Gothic Coding', monospace;
     font-size: 3rem;
     line-height: 1.3em;
     font-weight: 300;
