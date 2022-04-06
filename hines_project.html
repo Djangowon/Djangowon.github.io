@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- Document Settings -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Base Meta -->
+    <!-- dynamically fixing the title for tag/author pages -->
+
+
+
+    <title>몇 십년 후의 집: 하인즈</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles'n'Scripts -->
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/screen.edited.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/built/syntax.css" />
+    <!-- highlight.js -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+    <style>.hljs { background: none; }</style>
+
+    <!--[if IE]>
+        <style>
+            p, ol, ul{
+                width: 100%;
+            }
+            blockquote{
+                width: 100%;
+            }
+        </style>
+    <![endif]-->
+    
+    <!-- This tag outputs SEO meta+structured data and other important settings -->
+    <meta name="description" content="Backend Developer" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" type="image/png" />
+    <link rel="canonical" href="/hines_project" />
+    <meta name="referrer" content="no-referrer-when-downgrade" />
+
+     <!--title below is coming from _includes/dynamic_title-->
+    <meta property="og:site_name" content="Fast Dowon API" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="몇 십년 후의 집: 하인즈" />
+    <meta property="og:description" content="Hines Hines는 ‘몇 십년 후의 집’이라는 컨셉 하에 우주 속 다른 행성들의 땅을 소개하고 필요한 물품 판매를 목적으로 하는 스토어 사이트입니다. 인원은 프론트엔드 개발자 3명, 백엔드 개발자 3명이며 모든 기능은 직접 구현하였습니다. Hines-Backend-Repo 적용 기술 어플리케이션 API 서버 : Python 3.8 / Django Devops : AWS(EC2, S3, RDS), Linux, Docker" />
+    <meta property="og:url" content="/hines_project" />
+    <meta property="og:image" content="/assets/images/hines.jpeg" />
+    <meta property="article:publisher" content="https://www.facebook.com/ghost" />
+    <meta property="article:author" content="https://www.facebook.com/ghost" />
+    <meta property="article:published_time" content="2021-12-18T00:00:00+00:00" />
+    <meta property="article:modified_time" content="2021-12-18T00:00:00+00:00" />
+    <meta property="article:tag" content="Project" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="몇 십년 후의 집: 하인즈" />
+    <meta name="twitter:description" content="Hines Hines는 ‘몇 십년 후의 집’이라는 컨셉 하에 우주 속 다른 행성들의 땅을 소개하고 필요한 물품 판매를 목적으로 하는 스토어 사이트입니다. 인원은 프론트엔드 개발자 3명, 백엔드 개발자 3명이며 모든 기능은 직접 구현하였습니다. Hines-Backend-Repo 적용 기술 어플리케이션 API 서버 : Python 3.8 / Django Devops : AWS(EC2, S3, RDS), Linux, Docker" />
+    <meta name="twitter:url" content="/" />
+    <meta name="twitter:image" content="/assets/images/hines.jpeg" />
+    <meta name="twitter:label1" content="Written by" />
+    <meta name="twitter:data1" content="Fast Dowon API" />
+    <meta name="twitter:label2" content="Filed under" />
+    <meta name="twitter:data2" content="Project" />
+    <meta name="twitter:site" content="@tryghost" />
+    <meta name="twitter:creator" content="@tryghost" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="933" />
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Website",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Fast Dowon API",
+        "logo": "/assets/images/blog-icon.png"
+    },
+    "url": "/hines_project",
+    "image": {
+        "@type": "ImageObject",
+        "url": "/assets/images/hines.jpeg",
+        "width": 2000,
+        "height": 666
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "/hines_project"
+    },
+    "description": "Hines Hines는 ‘몇 십년 후의 집’이라는 컨셉 하에 우주 속 다른 행성들의 땅을 소개하고 필요한 물품 판매를 목적으로 하는 스토어 사이트입니다. 인원은 프론트엔드 개발자 3명, 백엔드 개발자 3명이며 모든 기능은 직접 구현하였습니다. Hines-Backend-Repo 적용 기술 어플리케이션 API 서버 : Python 3.8 / Django Devops : AWS(EC2, S3, RDS), Linux, Docker"
+}
+    </script>
+
+    <!-- <script type="text/javascript" src="https://demo.ghost.io/public/ghost-sdk.min.js?v=724281a32e"></script>
+    <script type="text/javascript">
+    ghost.init({
+    	clientId: "ghost-frontend",
+    	clientSecret: "f84a07a72b17"
+    });
+    </script> -->
+
+    <meta name="generator" content="Jekyll 3.6.2" />
+    <link rel="alternate" type="application/rss+xml" title="몇 십년 후의 집: 하인즈" href="/feed.xml" />
+
+
+</head>
+<body class="post-template">
+
+    <div class="site-wrapper">
+        <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
+        <!-- default -->
+
+<!-- The tag above means: insert everything in this file
+into the {body} of the default.hbs template -->
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/"><img src="/assets/images/blog-icon.png" alt="Fast Dowon API" /></a>
+            
+        
+        
+            <ul class="nav" role="menu">
+    <li class="nav-home" role="menuitem"><a href="/">Home</a></li>
+    <li class="nav-about" role="menuitem"><a href="/about/">About</a></li>
+    <li class="nav-project" role="menuitem"><a href="/tag/project/">project</a></li>
+    <li class="nav-journal" role="menuitem"><a href="/tag/journal/">Journal</a></li>
+</ul>
+
+        
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+            <!-- 
+                <a class="social-link social-link-fb" href="https://facebook.com/ghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+</a>
+            
+            
+                <a class="social-link social-link-tw" href="https://twitter.com/tryghost" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+</a>
+             -->
+            
+                <a class="social-link social-link-gh" href="https://github.com/Djangowon" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.84 9.49.5.09.68-.22.68-.485 0-.236-.008-.866-.013-1.7-2.782.603-3.37-1.34-3.37-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.07-.607.07-.607 1.004.07 1.532 1.03 1.532 1.03.89 1.53 2.34 1.09 2.91.833.09-.647.348-1.086.634-1.337-2.22-.252-4.555-1.112-4.555-4.944 0-1.09.39-1.984 1.03-2.682-.104-.254-.448-1.27.096-2.646 0 0 .84-.27 2.75 1.025.8-.223 1.654-.333 2.504-.337.85.004 1.705.114 2.504.336 1.91-1.294 2.748-1.025 2.748-1.025.546 1.376.202 2.394.1 2.646.64.7 1.026 1.59 1.026 2.682 0 3.84-2.337 4.687-4.565 4.935.36.307.68.917.68 1.852 0 1.335-.013 2.415-.013 2.74 0 .27.18.58.688.482C19.138 20.16 22 16.416 22 12c0-5.523-4.477-10-10-10z"></path></g></svg></a>
+            
+        </div>
+        
+            <a class="subscribe-button" href="#subscribe">Subscribe</a>
+        
+    </div>
+</nav>
+
+    </div>
+</header>
+
+<!-- Everything inside the #post tags pulls data from the post -->
+<!-- #post -->
+
+<main id="site-main" class="site-main outer" role="main">
+    <div class="inner">
+
+        <article class="post-full  tag-project post ">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="18 December 2021">18 December 2021</time>
+                    
+                        <span class="date-divider">/</span>
+                        
+                            
+                               <a href='/tag/project/'>PROJECT</a>
+                            
+                        
+                    
+                </section>
+                <h1 class="post-full-title">몇 십년 후의 집: 하인즈</h1>
+            </header>
+
+            
+            <figure class="post-full-image" style="background-image: url(/assets/images/hines.jpeg)">
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="kg-card-markdown">
+                    <h1 id="hines">Hines</h1>
+<p><code class="language-plaintext highlighter-rouge">Hines</code>는 ‘몇 십년 후의 집’이라는 컨셉 하에 우주 속 다른 행성들의 땅을 소개하고 필요한 물품 판매를 목적으로 하는 스토어 사이트입니다. 인원은 프론트엔드 개발자 3명, 백엔드 개발자 3명이며 모든 기능은 직접 구현하였습니다.<br />
+<a href="https://github.com/wecode-bootcamp-korea/27-2nd-Hines-backend">Hines-Backend-Repo</a></p>
+
+<h2 id="적용-기술">적용 기술</h2>
+<ul>
+  <li>어플리케이션 API 서버 : Python 3.8 / Django</li>
+  <li>Devops : AWS(EC2, S3, RDS), Linux, Docker</li>
+  <li>프로젝트 관리 : notion, trello</li>
+</ul>
+
+<h2 id="담당-기능">담당 기능</h2>
+<ul>
+  <li>ERD &amp; Modelling 제작</li>
+  <li>메인페이지 &amp; 리스트페이지
+    <ul>
+      <li>카테고리 목록 반환 기능 구현</li>
+      <li>카테고리 및 서브 카테고리에 따른 프로덕트 리스트를 반환하는 API 구현</li>
+      <li>검색 기능 구현</li>
+    </ul>
+  </li>
+  <li>장바구니 기능(CRUD) 구현</li>
+  <li>API Unit test에 적용되는 테스트코드 작성</li>
+  <li>AWS(EC2, RDS)를 이용하여 배포</li>
+</ul>
+
+<h2 id="코드리뷰">코드리뷰</h2>
+<h4 id="productsviewspycategoriesview-수정-전">products/views.py/CategoriesView 수정 전</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CategoriesView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="n">offset</span>      <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">GET</span><span class="p">.</span><span class="n">ge</span><span class="p">(</span><span class="s">'offset'</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span>
+        <span class="n">limit</span>       <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">GET</span><span class="p">.</span><span class="n">ge</span><span class="p">(</span><span class="s">'limit'</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+        <span class="n">category_id</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">GET</span><span class="p">.</span><span class="n">ge</span><span class="p">(</span><span class="s">'category_id'</span><span class="p">)</span>
+        <span class="n">categories</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="s">'id'</span>      <span class="p">:</span> <span class="n">category</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+            <span class="s">'name'</span>    <span class="p">:</span> <span class="n">category</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s">'product'</span> <span class="p">:</span> <span class="p">[{</span>
+                <span class="s">'id'</span>                  <span class="p">:</span> <span class="n">productid</span><span class="p">,</span>
+                <span class="s">'name'</span>                <span class="p">:</span> <span class="n">productname</span><span class="p">,</span>
+                <span class="s">'price'</span>               <span class="p">:</span> <span class="n">productprice</span><span class="p">,</span>
+                <span class="s">'brand'</span>               <span class="p">:</span> <span class="n">productbrand</span><span class="p">,</span>
+                <span class="s">'thumbnail_image_url'</span> <span class="p">:</span> <span class="n">productthumbnail_image_url</span> 
+                <span class="p">}</span> <span class="k">for</span>  <span class="n">product</span> <span class="ow">in</span> <span class="n">Product</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">sub_category__category_id</span><span class="o">=</span><span class="n">categoy_id</span><span class="p">)]</span>
+            <span class="p">}</span> <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">Category</span><span class="p">.</span><span class="n">objectsfilter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">category_id</span><span class="p">)</span>  <span class="p">[</span><span class="n">offset</span><span class="p">:</span><span class="n">offset</span><span class="o">+</span><span class="n">limit</span><span class="p">]</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'SUCCESS'</span><span class="p">,</span><span class="s">'result'</span><span class="p">:</span><span class="n">categories</span><span class="p">},</span>     <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>ProductListView 가 메뉴 안의 카테고리 안의 서브카테고리를 클릭하면 해당 서브카테고리의 프로덕트를 반환하도록 구현했는데, 서브카테고리가 참조하고 있는 카테고리만 클릭해도 카테고리의 전체 프로덕트 리스트 반환이 필요해서 카테고리 뷰를 새로 만들었다. 카테고리 뷰를 따로 만들지 않아도 되는 건지 궁금했는데 코드리뷰를 받고 나서 이미 ProductListView에서 반환하고 있는 상품 정보랑 코드가 굉장히 비슷하기 때문에 CategoriesView는 카테고리 정보만 반환하도록 만들고, ProductListView를 통해서 상품 정보를 받아올 수 있도록 아래와 같이 수정하게 되었다.</p>
+<h4 id="수정-후">수정 후</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CategoriesView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">all</span><span class="p">().</span><span class="n">prefetch_related</span><span class="p">(</span><span class="s">'subcategory_set'</span><span class="p">)</span>
+
+        <span class="n">results</span> <span class="o">=</span> <span class="p">[{</span>
+            <span class="s">'id'</span>   <span class="p">:</span> <span class="n">category</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+            <span class="s">'name'</span> <span class="p">:</span> <span class="n">category</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+            <span class="s">'sub_category'</span> <span class="p">:</span> <span class="p">[{</span>
+                <span class="s">'id'</span>   <span class="p">:</span> <span class="n">sub_category</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+                <span class="s">'name'</span> <span class="p">:</span> <span class="n">sub_category</span><span class="p">.</span><span class="n">name</span>
+            <span class="p">}</span> <span class="k">for</span> <span class="n">sub_category</span> <span class="ow">in</span> <span class="n">category</span><span class="p">.</span><span class="n">subcategory_set</span><span class="p">.</span><span class="nb">all</span><span class="p">()]</span>
+        <span class="p">}</span> <span class="k">for</span> <span class="n">category</span> <span class="ow">in</span> <span class="n">categories</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'SUCCESS'</span><span class="p">,</span> <span class="s">'result'</span><span class="p">:</span><span class="n">results</span> <span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>카테고리만 전체 반환하는 로직을 짰다가 프론트 주영님과 상의 후 상단에 들어갈 카테고리 외에도 사이드바에 있는 메뉴에서 카테고리와 서브카테고리 전부 필요해서 위처럼 수정했다. 수정을 하면서 바뀌는 코드가 Restful 한 코드인가, 기존의 코드가 Restful하지 않은 코드인가 의문을 가지게 되었는데 결과적으로 수정전 코드도 restful 하지 않은 것은 아니다. restful과 별개로 이미 ProductListView 에서 똑같은 로직으로 프로덕트를 반환하는 기능이 이미 있었기 때문에 CategoriesView 는 굳이 프로덕트를 반환하지 않도록 수정된 것이다.</p>
+
+<h4 id="cartviewspycartview-수정-전">cart/views.py/CartView 수정 전</h4>
+<h4 id="-post">* POST</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CartView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="o">@</span><span class="n">login_required</span>
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>    
+            <span class="n">data</span>       <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">)</span>
+            <span class="n">product_id</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'product_id'</span><span class="p">]</span>
+            <span class="n">quantity</span>   <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'quantity'</span><span class="p">]</span>
+            
+            <span class="n">cart</span><span class="p">,</span> <span class="n">created</span>  <span class="o">=</span> <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="n">get_or_create</span><span class="p">(</span>
+                <span class="n">user_id</span>    <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+                <span class="n">product_id</span> <span class="o">=</span> <span class="n">product_id</span><span class="p">,</span>
+            <span class="p">)</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">created</span><span class="p">:</span>
+                <span class="n">cart</span><span class="p">.</span><span class="n">quantity</span> <span class="o">+=</span> <span class="n">quantity</span>
+                <span class="n">cart</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+                <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span> <span class="p">:</span> <span class="s">'SUCCESS'</span><span class="p">},</span> <span class="n">status</span> <span class="o">=</span> <span class="mi">200</span><span class="p">)</span>
+            
+            <span class="n">cart</span><span class="p">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">quantity</span> <span class="c1"># 여기
+</span>            <span class="n">cart</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+
+            <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span> <span class="p">:</span> <span class="s">'SUCCESS'</span><span class="p">},</span> <span class="n">status</span> <span class="o">=</span> <span class="mi">201</span><span class="p">)</span>
+</code></pre></div></div>
+<p>처음 작성했던 CartView에서 cart 데이터가 없어서 새로 생성하는 경우와 이미 cart에 담긴 product가 있어서 새로 post를 할 때 수량만 추가되는 경우로 나눠서 생각했었는데, if문은 필요가 없고 표시해둔 부분만 <code class="language-plaintext highlighter-rouge">cart.quantity += quantity</code>로 <code class="language-plaintext highlighter-rouge">+</code>만 추가되면 되는 코드였다. 불필요한 if문을 삭제하고 satus code는 200으로 통일하여 아래와 같이 수정했다.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">CartView</span><span class="p">(</span><span class="n">View</span><span class="p">):</span>
+    <span class="o">@</span><span class="n">login_required</span>
+    <span class="k">def</span> <span class="nf">post</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+
+        <span class="n">data</span>       <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">)</span>
+        <span class="n">product_id</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'product_id'</span><span class="p">]</span>
+        <span class="n">quantity</span>   <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'quantity'</span><span class="p">]</span>
+
+        <span class="n">cart</span><span class="p">,</span> <span class="n">created</span>  <span class="o">=</span> <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="n">get_or_create</span><span class="p">(</span>
+            <span class="n">user_id</span>    <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+            <span class="n">product_id</span> <span class="o">=</span> <span class="n">product_id</span>
+        <span class="p">)</span>
+
+        <span class="n">cart</span><span class="p">.</span><span class="n">quantity</span> <span class="o">+=</span> <span class="n">quantity</span>
+        <span class="n">cart</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'SUCCESS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</code></pre></div></div>
+<h4 id="-delete">* DELETE</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span> 
+        <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">)</span>
+        <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s">'cart_id'</span><span class="p">]).</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'SUCCESS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+    
+    <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message : KEY_ERROR'</span><span class="p">},</span> <span class="n">status</span> <span class="o">=</span> <span class="mi">400</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>장바구니의 삭제 기능이다. 처음에 작성할 땐 id__in 이 ‘id 를 전체를 불러오고 같은 cart_id 가 있으면 삭제’ 이렇게 생각해서 위처럼 코드를 짰는데 이상한 코드가 됐다. 만약 cart_id를 받아서 cart 한 개를 삭제하는 로직은 path parameter를 사용해야 하고, cart_id 를 여러개 받아서 해당 id 값의 cart를 삭제하려면 query parameter를 사용해야 하는 것을 알게 되었다.<br />
+*하나의 parameter -&gt; path, 여러개의 parameter -&gt; query</p>
+
+<h4 id="수정-후-1">수정 후</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+    <span class="n">cart_ids</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">GET</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'cartIds'</span><span class="p">)</span>
+
+    <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">cart_ids</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">).</span><span class="n">delete</span><span class="p">()</span>
+
+    <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'NO_CONTENTS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">204</span><span class="p">)</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="c1"># cart 한 개 지우는 로직 -&gt; path parameter 사용
+</span>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">cart_id</span><span class="p">):</span>
+        <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">cart_id</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">).</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'NO_CONENTS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">204</span><span class="p">)</span>
+    
+    <span class="c1"># DELETE :8000/carts?cartIds=[1,2,3,4]  
+</span>    <span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">):</span>
+        <span class="n">cart_ids</span> <span class="o">=</span> <span class="n">request</span><span class="p">.</span><span class="n">GET</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">"cartIds"</span><span class="p">)</span>
+        <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">id__in</span><span class="o">=</span><span class="n">cart_ids</span><span class="p">,</span> <span class="n">user_id</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">).</span><span class="n">delete</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'NO_CONENTS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">204</span><span class="p">)</span>
+</code></pre></div></div>
+<h4>+</h4>
+<h4 id="path-parameter-적용완료한-patch-로직">path parameter 적용완료한 patch 로직</h4>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">patch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">cart_id</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="p">.</span><span class="n">loads</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">body</span><span class="p">)</span>
+
+            <span class="n">cart</span> <span class="o">=</span> <span class="n">Cart</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span><span class="n">cart_id</span><span class="p">,</span> <span class="n">user</span><span class="o">=</span><span class="n">request</span><span class="p">.</span><span class="n">user</span><span class="p">)</span>
+
+            <span class="n">cart</span><span class="p">.</span><span class="n">quantity</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s">'quantity'</span><span class="p">]</span>
+            <span class="n">cart</span><span class="p">.</span><span class="n">save</span><span class="p">()</span>
+
+            <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'SUCCESS'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="nb">KeyError</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">JsonResponse</span><span class="p">({</span><span class="s">'message'</span><span class="p">:</span><span class="s">'KEY_ERROR'</span><span class="p">},</span> <span class="n">status</span><span class="o">=</span><span class="mi">400</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="teamhines-회고">TeamHines 회고</h2>
+<p>2차 프로젝트가 <code class="language-plaintext highlighter-rouge">오늘의 집</code> 서비스로 결정되고 처음에 팀원들과 사이트를 둘러보며 우리 프로젝트명과 어떤 기능을 구현할지 스프린트 미팅을 했다. 여러 의견들 중에서 스쳐지나가듯 <code class="language-plaintext highlighter-rouge">몇십년 후의 집</code>이 나왔는데 처음엔 웃기기도 하고 단번에 그 문장에 꽂혀서 <code class="language-plaintext highlighter-rouge">House in decades</code>-&gt;<code class="language-plaintext highlighter-rouge">Hines(하인즈)</code>로 결정되었고 우주 행성 커머스 사이트로 기획하게 되었다. 우리가 구현할 기능 중에 오늘의 집 사이트에서 크게 스토어와 커뮤니티로 나누어졌는데 프로젝트 기간에 맞추어 스토어만 구현하는 것으로 목표를 설정했다. 웃으며 한 말인데 기획이 산으로 가는 것도 아니고 우주로 갔다고 했지만 미팅 분위기는 좋았고 모두 우주 사이트를 멋있게 만들어보자고 시작했던 기억이 난다. 명확한 컨셉으로 인해 결과적으로 우리 사이트에서 오늘의 집의 흔적은 찾을 수 없게 되었다. (그냥 다른 커머스 사이트 같음!)</p>
+
+<p>자유로운 분위기로 회의록도 서기를 따로 정하지 않고 본인이 맡은 부분을 각자 적어서 미팅때 다같이 보며 노션페이지와 트렐로를 보며 이야기했고, 미팅시간도 1주차까지는 유동적으로 조율하면서 진행했는데 시간은 고정시간을 정해놓고 하는 게 좋은 것 같아서 2주차부터 고정 시간에 일일 스크럼을 하는 걸로 바꾸었다.</p>
+
+<p>이번 프로젝트때 최종발표 이틀 전까지 프.백 모두 기능구현이 완료되지 않아서 통신이 많이 늦어졌고 맞춰보는데 시간소요가 예상보다 많이 되었었다. 하루 전 날 프론트와 맞춰보면서 에러를 고치며 수정한 부분도 많았기 때문에 그동안 프론트와 제대로 소통한 게 아니었구나 생각했다. 프로젝트를 마무리하고 회고 미팅을 할 때 한 프론트 팀원분의 말이 ‘아쉬운 점은 백엔드와 소통을 많이 안 한 것, 아이러니하지만 잘한 점도 백엔드와 소통을 원활하게 한 것’ 인데 그게 특정한 같은 기능을 맡은 프.백 멤버들끼리만(특정 팀원이랑만) 맞춰보고 이야기해서 다른 팀원이랑 또 다른 기능을 통신할 때 걸림돌이 많았던 게 나 역시 그랬던 것 같아서 아쉬운 점으로 꼽았다.</p>
+
+
+                </div>
+            </section>
+
+            <!-- Email subscribe form at the bottom of the page -->
+            
+                <section class="subscribe-form">
+                    <h3 class="subscribe-form-title">Subscribe to Fast Dowon API</h3>
+                    <p>Get the latest posts delivered right to your inbox</p>
+                    <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+                </section>
+            
+
+            <footer class="post-full-footer">
+                <!-- Everything inside the #author tags pulls data from the author -->
+                <!-- #author-->
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        <section class="author-card">
+                            
+                                <img class="author-profile-image" src="/assets/images/dw.jpg" alt="mrdw" />
+                            
+                            <section class="author-card-content">
+                                <h4 class="author-card-name"><a href="/author/mrdw">mrdw</a></h4>
+                                
+                                    <p>Backend Developer</p>
+                                
+                            </section>
+                        </section>
+                        <div class="post-full-footer-right">
+                            <a class="author-card-button" href="/author/mrdw">Read More</a>
+                        </div>
+                    
+                
+                <!-- /author  -->
+            </footer>
+
+            <!-- If you use Disqus comments, just uncomment this block.
+            The only thing you need to change is "test-apkdzgmqhj" - which
+            should be replaced with your own Disqus site-id. -->
+            
+
+        </article>
+
+    </div>
+</main>
+
+<!-- Links to Previous/Next posts -->
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+            
+                
+                
+                
+                
+                    <article class="read-next-card"
+                        
+                            style="background-image: url(/assets/images/blog-cover.jpg)"
+                        
+                    >
+                        <header class="read-next-card-header">
+                            <small class="read-next-card-header-sitetitle">&mdash; Fast Dowon API &mdash;</small>
+                            
+                                <h3 class="read-next-card-header-title"><a href="/tag/project/">Project</a></h3>
+                            
+                        </header>
+                        <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                        <div class="read-next-card-content">
+                            <ul>
+                                
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                
+                                  
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/branch_project">첫 프로젝트: 코드가 작품이 되는 공간, 브랜치</a></li>
+                                        
+                                    
+                                  
+                                
+                            </ul>
+                        </div>
+                        <footer class="read-next-card-footer">
+                            <a href="/tag/project/">
+                                
+                                    See all 1 posts  →
+                                
+                            </a>
+                        </footer>
+                    </article>
+                
+            
+
+            <!-- If there's a next post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template no-image">
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/payhere_internship">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Journal</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">페이히어 인턴 기록.</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Payhere 페이히어에서 4주 간의 인턴생활을 마무리했고 그 후기를 적어보려고 합니다. 제 개인적으로 페이히어에서 인턴쉽을 진행할 수 있게 되어서 운도 정말 좋았다고 생각하고, 페이히어에서 만난 현업에 있는 선배 개발자 분들께서 많은 걸 얻어갔으면 좋겠다고</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/dw.jpg" alt="mrdw" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/mrdw/">mrdw</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      3 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+            <!-- If there's a previous post, display it using the same markup included from - partials/post-card.hbs -->
+            
+                
+
+    <article class="post-card post-template">
+        
+            <a class="post-card-image-link" href="/branch_project">
+                <div class="post-card-image" style="background-image: url(/assets/images/branch.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/branch_project">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Project</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">첫 프로젝트: 코드가 작품이 되는 공간, 브랜치</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Branch 카카오에서 서비스 중인 작가들의 블로그 사이트 Brunch를 모티브로 하여 프로젝트를 진행하였습니다. 프론트엔드 개발자 3명, 백엔드 개발자 3명으로 이루어진 Branch 프로젝트는 개발자들의 기술 블로그 컨셉으로 기존의 사이트를 참고하여 모든 기능은 직접 구현하였습니다. Branch-Backend-Repo</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/dw.jpg" alt="mrdw" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/mrdw/">mrdw</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      5 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+            
+
+        </div>
+    </div>
+</aside>
+
+<!-- Floating header which appears on-scroll, included from includes/floating-header.hbs -->
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="/">
+            
+                <img src="/assets/images/favicon.png" alt="Fast Dowon API icon" />
+            
+            <span>Fast Dowon API</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">몇 십년 후의 집: 하인즈</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=%EB%AA%87+%EC%8B%AD%EB%85%84+%ED%9B%84%EC%9D%98+%EC%A7%91%3A+%ED%95%98%EC%9D%B8%EC%A6%88&amp;url=https://github.com/Djangowon/Djangowon.github.iohines_project"
+            onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Djangowon/Djangowon.github.iohines_project"
+            onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+
+        </a>
+    </div>
+    <progress class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+<!-- /post -->
+
+<!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs -->
+
+
+        <!-- Previous/next page links - displayed on every page -->
+        
+
+        <!-- The footer at the very bottom of the screen -->
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="/">Fast Dowon API</a> &copy; 2022</section>
+                <!-- <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
+                    <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
+                    <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section> -->
+                <nav class="site-footer-nav">
+                    <a href="/">Latest Posts</a>
+                    <!-- <a href="https://facebook.com/ghost" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://twitter.com/tryghost" target="_blank" rel="noopener">Twitter</a> -->
+                    <a href="https://github.com/Djangowon" target="_blank" rel="noopener">Github</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- The big email subscribe modal content -->
+    
+        <div id="subscribe" class="subscribe-overlay">
+            <a class="subscribe-overlay-close" href="#"></a>
+            <div class="subscribe-overlay-content">
+                
+                    <img class="subscribe-overlay-logo" src="/assets/images/blog-icon.png" alt="Fast Dowon API" />
+                
+                <h1 class="subscribe-overlay-title">Subscribe to Fast Dowon API</h1>
+                <p class="subscribe-overlay-description">Stay up to date! Get all the latest &amp; greatest posts delivered straight to your inbox</p>
+                <form method="post" action="/subscribe/" class="">
+    <input class="confirm" type="hidden" name="confirm"  /><input class="location" type="hidden" name="location"  /><input class="referrer" type="hidden" name="referrer"  />
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email"  placeholder="youremail@example.com" />
+    </div>
+    <button class="" type="submit" disabled><span>Subscribe</span></button>
+    <script type="text/javascript">(function(g,h,o,s,t){h[o]('.location')[s]=h[o]('.location')[s] || g.location.href;h[o]('.referrer')[s]=h[o]('.referrer')[s] || h.referrer;})(window,document,'querySelector','value');</script>
+</form>
+
+            </div>
+        </div>
+    
+
+    <!-- highlight.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/components/prism-abap.min.js"></script>
+    <script>$(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });</script>
+
+    <!-- jQuery + Fitvids, which makes all video embeds responsive -->
+    <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="https://demo.ghost.io/assets/js/jquery.fitvids.js?v=724281a32e"></script>
+
+
+    <!-- Paginator increased to "infinit" in _config.yml -->
+    <!-- if paginator.posts  -->
+    <!-- <script>
+        var maxPages = parseInt('');
+    </script>
+    <script src="/assets/js/infinitescroll.js"></script> -->
+    <!-- /endif -->
+
+    
+
+
+    <!-- Add Google Analytics  -->
+    <!-- Google Analytics Tracking code -->
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-69281367-1', 'auto');
+  ga('send', 'pageview');
+
+ </script>
+
+
+    <!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. -->
+    
+        <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+});
+</script>
+
+    
+
+    <!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag -->
+    <!-- ghost_foot -->
+
+</body>
+</html>

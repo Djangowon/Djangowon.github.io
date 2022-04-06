@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> - Articles</title>
+    <description>Backend Developer</description>
+    <link>
+    </link>
+    
+      
+      <item>
+        <title>내 Github 이름이 Djangowon인 이유</title>
+        
+          <description>&lt;h1 id=&quot;djangowon&quot;&gt;Djangowon?&lt;/h1&gt;
+&lt;p&gt;한창 부트캠프에서 장고를 배우게 되었을 무렵, 이 당시만 해도 깃헙을 잘 다루지 못했다. 
+게임을 좋아해서 그런지 네이밍에 항상 진심이었던 나는 깃헙 이름도 동료들이 들었을 때 재미있고 기억에 각인될 이름을 가지고 싶었던 것 같다.
+내 첫 프레임워크가 장고인 만큼 이때는 장고를 잘 다루고 싶은 마음이 정말 컸기 때문에(물론, 지금도 여전히 장고 잘 쓰고 싶음)   나중에도 항상 깃헙을 보며 처음 개발 공부를 하던 것처럼 초심을 찾자는 의미를 담았다.
+사실 내 이름에서 D만 가장 앞으로 가져오면 Djangowon이라 이거다 싶었다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 07 Apr 2022 00:00:00 +0000</pubDate>
+        <link>
+        /the_reason_why_my_github_is_djangowon</link>
+        <guid isPermaLink="true">/the_reason_why_my_github_is_djangowon</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>나의 개발이야기</title>
+        
+          <description>&lt;h1 id=&quot;나의-개발이야기&quot;&gt;나의 개발이야기&lt;/h1&gt;
+&lt;h3 id=&quot;q1-개발을-하기-전에-어떤-직무를-맡으셨나요&quot;&gt;Q1. 개발을 하기 전에 어떤 직무를 맡으셨나요?&lt;/h3&gt;
+&lt;h3 id=&quot;a1&quot;&gt;A1.&lt;/h3&gt;
+&lt;p&gt;패션디자인을 전공을 하고 의류 개발실에서 일을 하다가 백엔드 개발자로 커리어를 전환하게 된 이유를 적어보려고 합니다. 이전 직무 경험의 전반적인 워크 플로우는 디자이너가 도식화를 그려서 디자인을 한다면 그 도식화를 바탕으로 실제 옷이 만들어지는 도안, 패턴을 CAD로 만드는 일입니다. 말하자면 저는 옷의 설계도(평면 패턴)를 2D로 만드는 사람이었는데 CLO라는 3D 의상 시뮬레이션 소프트웨어를 접하게 되었고 이 시기에 빠르게 변화하는 IT기술 도입에 큰 관심이 생겼습니다.&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Fri, 28 Jan 2022 00:00:00 +0000</pubDate>
+        <link>
+        /my_development_story</link>
+        <guid isPermaLink="true">/my_development_story</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>페이히어 인턴 기록.</title>
+        
+          <description>&lt;h1 id=&quot;payhere&quot;&gt;Payhere&lt;/h1&gt;
+&lt;p&gt;페이히어에서 4주 간의 인턴생활을 마무리했고 그 후기를 적어보려고 합니다. 제 개인적으로 페이히어에서 인턴쉽을 진행할 수 있게 되어서 운도 정말 좋았다고 생각하고, 페이히어에서 만난 현업에 있는 선배 개발자 분들께서 많은 걸 얻어갔으면 좋겠다고 알려주신 것과 해주신 조언들이 앞으로 주니어 개발자로 성장하는 데 큰 힘이 될 것 같습니다!&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Thu, 27 Jan 2022 00:00:00 +0000</pubDate>
+        <link>
+        /payhere_internship</link>
+        <guid isPermaLink="true">/payhere_internship</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>몇 십년 후의 집: 하인즈</title>
+        
+          <description>&lt;h1 id=&quot;hines&quot;&gt;Hines&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Hines&lt;/code&gt;는 ‘몇 십년 후의 집’이라는 컨셉 하에 우주 속 다른 행성들의 땅을 소개하고 필요한 물품 판매를 목적으로 하는 스토어 사이트입니다. 인원은 프론트엔드 개발자 3명, 백엔드 개발자 3명이며 모든 기능은 직접 구현하였습니다.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/wecode-bootcamp-korea/27-2nd-Hines-backend&quot;&gt;Hines-Backend-Repo&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sat, 18 Dec 2021 00:00:00 +0000</pubDate>
+        <link>
+        /hines_project</link>
+        <guid isPermaLink="true">/hines_project</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>첫 프로젝트: 코드가 작품이 되는 공간, 브랜치</title>
+        
+          <description>&lt;h1 id=&quot;branch&quot;&gt;Branch&lt;/h1&gt;
+&lt;p&gt;카카오에서 서비스 중인 작가들의 블로그 사이트 Brunch를 모티브로 하여 프로젝트를 진행하였습니다.
+프론트엔드 개발자 3명, 백엔드 개발자 3명으로 이루어진 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Branch&lt;/code&gt; 프로젝트는 개발자들의 기술 블로그 컨셉으로 기존의 사이트를 참고하여 모든 기능은 직접 구현하였습니다.&lt;br /&gt;
+&lt;a href=&quot;https://github.com/wecode-bootcamp-korea/27-1st-branch-backend/&quot;&gt;Branch-Backend-Repo&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        
+        <pubDate>Sun, 12 Dec 2021 00:00:00 +0000</pubDate>
+        <link>
+        /branch_project</link>
+        <guid isPermaLink="true">/branch_project</guid>
+      </item>
+      
+    
+  </channel>
+</rss>
