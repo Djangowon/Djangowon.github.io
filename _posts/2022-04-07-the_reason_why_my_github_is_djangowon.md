@@ -4,6 +4,7 @@ current: post
 cover:  assets/images/start.png
 navigation: True
 title: 내 Github 이름이 Djangowon인 이유
+published: true
 date: 2022-04-07
 tags: [Journal]
 class: post-template
